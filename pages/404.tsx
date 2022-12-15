@@ -13,7 +13,7 @@ const Img404 = styled.img`
     margin: 2vh;
 `;
 
-export default function fourOhFour(): JSX.Element {
+export default function FourOhFour(): JSX.Element {
 
   const [img, setImg] = useState({} as CmsImage);
 

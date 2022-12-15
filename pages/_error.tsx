@@ -13,7 +13,7 @@ const ImgError = styled.img`
     margin: 2vh;
 `;
 
-export default function error(): JSX.Element {
+export default function Error(): JSX.Element {
 
   const [img, setImg] = useState({} as CmsImage);
 
