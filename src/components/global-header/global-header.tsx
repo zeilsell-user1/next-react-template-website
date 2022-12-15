@@ -29,7 +29,7 @@ const GlobalHeader = ({
     useEffect(() => {
         !menu.length ? fillOutHeaderNavigationLinks() : console.info(menu);
         fillOutHeaderLogo();
-    }, []);
+    }, [menu]);
 
     // the calls to the state.set* functions are asynchronous. This userEffect demonstrates
     // this - if you put the console.info calls immediately after the call to setLogo then
