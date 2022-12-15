@@ -24,11 +24,6 @@ jobs:
         with:
           cmd: lint # will run `yarn lint` command
 
-      #- name: Test the app
-      #  uses: borales/actions-yarn@v4
-      #  with:
-      #    cmd: test # will run `yarn test` command
-
       - name: Build production bundle
         uses: borales/actions-yarn@v4
         with:
