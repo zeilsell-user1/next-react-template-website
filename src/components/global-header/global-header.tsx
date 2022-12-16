@@ -1,7 +1,12 @@
 import React, { ReactNode, useEffect, useState } from 'react';
 import Link from 'next/link';
 import NavLink from './nav-link';
-import { getLogo, getNavItems } from '../../../data/cms/cms-access'
+
+// the logo and the list of upto 5 navigation options are provided by the CMS. 
+// included in CMS behaviours are the utility functions to manipulate images
+
+import { getLogo, getNavItems, getImageUrl, CmsImage, CmsNavItem } from '../../features/cms-access'
+
 import {
     GlobalNav,
     GlobalNavItem,
@@ -13,8 +18,6 @@ import {
     NavbarButtons,
     ContactButton,
 } from './global-header.styles';
-import { getImageUrl } from '../../../data/cms/get-image-url';
-import { CmsImage, CmsNavItem } from '../../../data/cms/cms.types';
 
 type Props = {
 };
@@ -39,10 +42,10 @@ const GlobalHeader = ({
         console.log(logo.attribution);
         console.log(logo.caption);
         console.log(logo.reference);
-    },[logo]);
+    }, [logo]);
 
     const fillOutHeaderNavigationLinks = async () => {
-        const navLinksCallback = (navItemsData:CmsNavItem[]) => {  
+        const navLinksCallback = (navItemsData: CmsNavItem[]) => {
 
             // the header nav links are ordered in the fetch fromt he CMS. If
             // not then enable this code to sort the nav items by order
@@ -53,15 +56,15 @@ const GlobalHeader = ({
                 return 0;
               });
               */
-            
-            setMenu(navItemsData); 
+
+            setMenu(navItemsData);
         }
         getNavItems(navLinksCallback);
     }
 
     const fillOutHeaderLogo = async () => {
-        const logoCallback = (logoData:CmsImage) => {
-            setLogo(logoData);            
+        const logoCallback = (logoData: CmsImage) => {
+            setLogo(logoData);
         }
         getLogo(logoCallback);
     }
@@ -82,7 +85,7 @@ const GlobalHeader = ({
 
     const addLogoToHeader = () => {
         if (logo.reference != undefined) {
-            const logoUrl:string = getImageUrl(logo.reference, 50, 50);
+            const logoUrl: string = getImageUrl(logo.reference, 50, 50);
             return (
                 <LogoImg src={logoUrl} alt={logo.caption} />
             );
