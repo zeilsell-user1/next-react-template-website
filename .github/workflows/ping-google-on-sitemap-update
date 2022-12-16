@@ -10,7 +10,7 @@ on:
   push:
     # If your primary ("production") branch is "main" (or anything else) instead
     # of "master" you will need to update this line:
-    branches: [ master ]
+    branches: [ main ]
     # TODO: Update the filepath below to be the filepath to the live /
     # production / rendered sitemap.xml in your GitHub repo:
     paths:
