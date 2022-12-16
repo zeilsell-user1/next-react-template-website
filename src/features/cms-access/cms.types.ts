@@ -1,20 +1,20 @@
 export type CmsNavItem = {
-    enabled:boolean,
-    order:number,
-    title:string,
-    url:string,
-    subMenuItems?:CmsSubNavItem[],
-}
+  enabled: boolean;
+  order: number;
+  title: string;
+  url: string;
+  subMenuItems?: CmsSubNavItem[];
+};
 export type CmsSubNavItem = {
-    enabled:boolean,
-    order:number,
-    icon:string,
-    title:string,
-    url:string,
-}
+  enabled: boolean;
+  order: number;
+  icon: string;
+  title: string;
+  url: string;
+};
 
 export type CmsImage = {
-    attribution:string,
-    caption:string,
-    reference:string,
-}
+  attribution: string;
+  caption: string;
+  reference: string;
+};

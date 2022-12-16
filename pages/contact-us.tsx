@@ -1,7 +1,7 @@
-import Layout from '../src/components/layout/layout'
-import styles from '../styles/Home.module.css'
+import Layout from "../src/components/layout/layout";
+import styles from "../styles/Home.module.css";
 
-export default function contactUs():JSX.Element {
+export default function contactUs(): JSX.Element {
   return (
     <div className={styles.container}>
       <Layout title="Richard's contact us page">
@@ -10,5 +10,5 @@ export default function contactUs():JSX.Element {
         <p>Post at 92 The Road, The Town, The Country. CO2 1NT</p>
       </Layout>
     </div>
-  )
+  );
 }
