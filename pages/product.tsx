@@ -1,8 +1,8 @@
-import Link from 'next/link'
-import Layout from '../src/components/layout/layout'
-import styles from '../styles/Home.module.css'
+import Link from "next/link";
+import Layout from "../src/components/layout/layout";
+import styles from "../styles/Home.module.css";
 
-export default function product():JSX.Element {
+export default function product(): JSX.Element {
   return (
     <div className={styles.container}>
       <Layout title="Richard's product hub page">
@@ -15,5 +15,5 @@ export default function product():JSX.Element {
         </div>
       </Layout>
     </div>
-  )
+  );
 }
