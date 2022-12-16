@@ -1,9 +1,7 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { get404Image } from '../src/features/cms-access/cms-access';
-import { CmsImage } from '../data/cms/cms.types';
-import { getImageUrl } from '../data/cms/get-image-url';
+import { get404Image, CmsImage, getImageUrl } from '../src/features/cms-access';
 import Layout from '../src/components/layout/layout'
 import styles from '../styles/Home.module.css'
 

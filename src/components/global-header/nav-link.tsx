@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { NavLinkContainer, NavSubLink, } from './global-header.styles';
-import { CmsSubNavItem } from '../../../data/cms/cms.types';
+import { CmsSubNavItem } from '../../features/cms-access';
 
 type Props = {
     url: string;
