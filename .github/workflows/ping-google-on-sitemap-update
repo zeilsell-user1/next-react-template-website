@@ -14,7 +14,7 @@ on:
     # TODO: Update the filepath below to be the filepath to the live /
     # production / rendered sitemap.xml in your GitHub repo:
     paths:
-      - PATH/TO/YOUR/sitemap.xml
+      - public/sitemap.xml
 
   # This allows you to run this workflow manually from the Actions tab in your
   # GitHub repo:
