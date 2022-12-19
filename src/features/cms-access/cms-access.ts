@@ -33,6 +33,22 @@ export const getLogo = async (callback: Function) => {
   });
 };
 
+export const getBurger = async (callback: Function) => {
+  let query = '*[_type == "burger"]';
+  await cmsAccess(query).then((result) => {
+    if (result) {
+      let burger: CmsImage = {
+        attribution: result[0].attribution,
+        caption: result[0].caption,
+        reference: result[0].image.asset._ref,
+      };
+      callback(burger);
+    } else {
+      callback({} as CmsImage);
+    }
+  });
+};
+
 export const get404Image = async (callback: Function) => {
   let query = '*[_type == "fourohfour"]';
   await cmsAccess(query).then((result) => {
