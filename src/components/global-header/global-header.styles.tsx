@@ -37,7 +37,7 @@ export const BurgerImg = styled.img`
 `;
 
 export const GlobalNavMobileMenu = styled.div<{ isVisible: boolean }>`
-  display:block;
+  display: block;
   display: ${({ isVisible }) => (isVisible ? "visible" : "none")};
   margin: 1vh;
 `;

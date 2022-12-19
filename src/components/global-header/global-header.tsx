@@ -160,7 +160,7 @@ const GlobalHeader = ({}: Props): JSX.Element => {
     );
   };
 
-  // add the logo and burger images or handle failure elegantly 
+  // add the logo and burger images or handle failure elegantly
 
   const addLogoToHeader = () => {
     if (logo.reference != undefined) {
@@ -174,7 +174,13 @@ const GlobalHeader = ({}: Props): JSX.Element => {
   const addBurgerToHeader = () => {
     if (burger.reference != undefined) {
       const burgerUrl: string = getImageUrl(burger.reference, 30, 30);
-      return <BurgerImg src={burgerUrl} alt={burger.caption} onClick={() => onClickBurger()}/>;
+      return (
+        <BurgerImg
+          src={burgerUrl}
+          alt={burger.caption}
+          onClick={() => onClickBurger()}
+        />
+      );
     }
 
     return <BurgerImg src="./blanklogo.jpg" alt="temp logo" />;
@@ -184,7 +190,7 @@ const GlobalHeader = ({}: Props): JSX.Element => {
 
   const onClickBurger = () => {
     setMobileSubMenuVisible(!mobileMenuVisible);
-  }
+  };
 
   const isBreakpoint = useMediaQuery(768);
 

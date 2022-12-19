@@ -33,25 +33,25 @@ const StyledButton = styled.button<{
   font: string;
   hoverColor: string;
 }>`
-    cursor: pointer;
-    border-radius: 5%;
-    font: ${({ font }) => (font ? font : "Poppins")};
-    font-size: 2vh;
-    background: ${({ background }) => (background ? background : "white")};
-    color: ${({ color }) => (color ? color : "black")};
-    border: 1px solid ${({ border }) => (border ? border : "black")};
-    margin: 1vh;
+  cursor: pointer;
+  border-radius: 5%;
+  font: ${({ font }) => (font ? font : "Poppins")};
+  font-size: 2vh;
+  background: ${({ background }) => (background ? background : "white")};
+  color: ${({ color }) => (color ? color : "black")};
+  border: 1px solid ${({ border }) => (border ? border : "black")};
+  margin: 1vh;
 
-    &:hover {
-        color: ${({ hoverColor }) => (hoverColor ? hoverColor : "black")};
-        position: relative;
-        box-shadow: 0 1rem 2.5rem rgba(22, 28, 45, 0.1),
-            0 0.5rem 1rem -0.75rem rgba(22, 28, 45, 0.1) !important;
-        -webkit-transition: all 0.3s ease-out;
-        -moz-transition: all 0.3s ease-out;
-        -o-transition: all 0.3s ease-out;
-        transition: all 0.3s ease-out;
-    }
+  &:hover {
+    color: ${({ hoverColor }) => (hoverColor ? hoverColor : "black")};
+    position: relative;
+    box-shadow: 0 1rem 2.5rem rgba(22, 28, 45, 0.1),
+      0 0.5rem 1rem -0.75rem rgba(22, 28, 45, 0.1) !important;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+  }
 `;
 
 export const GenericButton = ({

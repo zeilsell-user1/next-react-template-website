@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import { NavLinkContainer, NavLinkMobileContainer, NavSubLink, NavSubLinkMobileContainer } from "./global-header.styles";
+import {
+  NavLinkContainer,
+  NavLinkMobileContainer,
+  NavSubLink,
+  NavSubLinkMobileContainer,
+} from "./global-header.styles";
 import { CmsSubNavItem } from "../../features/cms-access";
 
 type Props = {
