@@ -15,27 +15,15 @@ type Props = {
 };
 
 const NavLinkMobile = ({ url, title, subMenuItems }: Props): JSX.Element => {
-  const [subMenuVisible, setSubMenuVisible] = useState(false);
-
   const renderSubMenu = (item: CmsSubNavItem) => {
     const sublinkkey = "sublink".concat(item.title);
     return (
       <NavSubLinkMobileContainer>
         <Link key={item.title} href={item.url}>
-          <NavSubLink key={sublinkkey} isVisible={subMenuVisible}>
-            {item.icon} {item.title}
-          </NavSubLink>
+          {item.icon} {item.title}
         </Link>
       </NavSubLinkMobileContainer>
     );
-  };
-
-  const showSubMenuItems = () => {
-    setSubMenuVisible(true);
-  };
-
-  const hideSubMenuItems = () => {
-    setSubMenuVisible(false);
   };
 
   const linkkey = "link".concat(title);
@@ -44,11 +32,7 @@ const NavLinkMobile = ({ url, title, subMenuItems }: Props): JSX.Element => {
     return <div />;
   }
   return (
-    <NavLinkMobileContainer
-      key={title}
-      onMouseEnter={() => showSubMenuItems()}
-      onMouseLeave={() => hideSubMenuItems()}
-    >
+    <NavLinkMobileContainer key={title}>
       {
         <Link key={linkkey} href={url}>
           {title}
