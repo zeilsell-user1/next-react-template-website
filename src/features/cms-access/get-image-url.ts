@@ -6,12 +6,12 @@ import { ImageUrlBuilder } from "@sanity/image-url/lib/types/builder";
 const builder = imageUrlBuilder(myConfiguredSanityClient);
 
 export const getImageUrl = (
-  source: string,
+  reference: string,
   width?: number,
   height?: number
 ): string => {
   width ? width : (width = 500);
   height ? height : (height = 500);
 
-  return builder.image(source).width(width).height(height).url().toString();
+  return builder.image(reference).width(width).height(height).url().toString();
 };
